@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import RaisedButton from 'material-ui/RaisedButton'
+import React from 'react'
 import Avatar from 'material-ui/Avatar'
 import profileImage from './images/profile-image.jpg'
 import muiThemeable from 'material-ui/styles/muiThemeable'
@@ -15,7 +14,7 @@ const Header = (props) => {
     secondaryTextColor
   } = props.muiTheme.palette
 
-  let avatarRadius = 150;
+  let avatarRadius = MIN_WIDTH/2;
   let nameFontSize = 32;
 
   const Name = styled.h1`
