@@ -4,6 +4,7 @@ import App from './App';
 import './index.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import theme from './constants/theme'
 
 // Temporal, needed for onTouchTap, which some components have
 // http://stackoverflow.com/a/34015469/988941
@@ -14,7 +15,7 @@ injectTapEventPlugin();
  * injects the theme into the application context.
  */
 const AppWrapper = (props) => (
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={theme}>
     {props.app}
   </MuiThemeProvider>
 )

@@ -11,7 +11,7 @@ const centeringContainer = {
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  color: "red"
+  backgroundColor: "red"
 }
 
 let AvatarChip = () => (
@@ -49,7 +49,7 @@ class Navigation extends React.Component {
            <MenuItem onTouchTap={this.handleClose}
              style={centeringContainer}
               >
-              <Avatar size="200" src={profileImage} />
+              <Avatar size={100} src={profileImage} />
            </MenuItem>
            <MenuItem onTouchTap={this.handleClose}>Placeholder 2</MenuItem>
          </Drawer>
