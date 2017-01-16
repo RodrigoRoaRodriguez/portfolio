@@ -23,7 +23,7 @@ const Header = (props) => {
   `
 
   const Title = styled.h2`
-  color: ${secondaryTextColor};
+  color: ${primary1Color};
   `
   const Subtitle = styled.h3`
     color: ${secondaryTextColor};
