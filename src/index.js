@@ -9,13 +9,13 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
  * Material-UI components require a theme to be provided. MuiThemeProvider
  * injects the theme into the application context.
  */
-const WrappedApp = () => (
+const AppWrapper = (props) => (
   <MuiThemeProvider>
-    <App />
+    {props.app}
   </MuiThemeProvider>
-);
+)
 
 ReactDOM.render(
-  <WrappedApp />,
+  <AppWrapper app={<App />}/>,
   document.getElementById('root')
-);
+)
