@@ -38,10 +38,6 @@ const Header = (props) => {
       height:${1.5*avatarRadius+nameFontSize}px;
     }
   `
-  const Container = styled.div`
-    background-color: ${primary1Color};
-    padding: 1.5em 0;
-  `
 
   return(
     <header>
