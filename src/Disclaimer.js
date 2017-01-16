@@ -26,7 +26,7 @@ export default class  extends React.Component {
           onRequestClose={this.hide}
         >
               <h2>WARNING!</h2>
-              <p> This portfolio is a work in progress. None of it's current layout or implementation should be considered final.</p>
+              <p> This portfolio is a work in progress. None of its current layout or implementation should be considered final.</p>
         </Dialog>
       </div>
     )
