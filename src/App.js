@@ -1,25 +1,16 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Navigation from './Navigation'
-import Header from './Header'
-import Disclaimer from './Disclaimer'
-import muiThemeable from 'material-ui/styles/muiThemeable';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import routes from './routes/index';
+import Header from './components/Header';
 
-
-class App extends Component {
-
-  render() {
-    let AppStyle = {fontFamily:this.props.muiTheme.fontFamily}
-
-    return (
-      <div className="App" style={AppStyle}>
-        <Navigation />
-        <Header />
-        <Disclaimer />
+const App = () => (
+  <Router>
+    <div>
+      <Header routes={routes} />
+      <div className="content">
+        {routes.map(route => <Route exact path={`/${route.path}`} key={route.path} component={route.component} />)}
       </div>
-    )
-  }
-}
-
-export default muiThemeable()(App);
+    </div>
+  </Router>
+);
+export default App;

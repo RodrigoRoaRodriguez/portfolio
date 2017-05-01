@@ -1,26 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import App from './App';
+// import Home from './Routes/Home';
+// import Skills from './Routes/Skills';
+// import Portfolio from './Routes/Portfolio';
 import './index.css';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import theme from './constants/theme'
-
-// Temporal, needed for onTouchTap, which some components have
-// http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin();
-
-/**
- * Material-UI components require a theme to be provided. MuiThemeProvider
- * injects the theme into the application context.
- */
-const AppWrapper = (props) => (
-  <MuiThemeProvider muiTheme={theme}>
-    {props.app}
-  </MuiThemeProvider>
-)
+// import reduxStore from './scripts/reducers/root';
 
 ReactDOM.render(
-  <AppWrapper app={<App />}/>,
-  document.getElementById('root')
-)
+  <App />,
+  /*<Provider store={reduxStore}>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/skills" component={Skills} />
+        <Route path="/art" component={Art} />
+      </Switch>
+    </Router>
+  </Provider>,*/
+  document.getElementById('root'),
+);

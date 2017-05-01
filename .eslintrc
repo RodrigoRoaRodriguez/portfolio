@@ -1,0 +1,26 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": ["error", {
+      "extensions": [".js", ".jsx"]
+    }],
+    "no-plusplus": [ "error", { "allowForLoopAfterthoughts": true } ],
+    "no-mixed-operators": [
+      "error",
+      { 
+        "groups": [ 
+          [ "&", "|", "^", "~", "<<", ">>", ">>>" ], 
+          [ "==", "!=", "===", "!==", ">", ">=", "<", "<=" ], 
+          [ "&&", "||" ], 
+          [ "in", "instanceof" ] 
+        ], 
+        "allowSamePrecedence": true
+      }
+    ],
+    "no-confusing-arrow": [
+      0
+    ]
+  }
+}
