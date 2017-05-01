@@ -10,8 +10,7 @@ const Navigation = styled.nav`
   `;
 
 const NavItem = styled(NavLink)`
-  font-family: 'Oswald', sans-serif;
-  font-weight: 500;
+  font-family: ${props => props.theme.font.heading}
   display: block;
   padding: 1.2em;
   justify-content: flex-end;
@@ -25,12 +24,6 @@ const NavItem = styled(NavLink)`
   background: #eee;
   border-bottom: solid .3em ${({ color }) => color};
 
-  &.name {
-    flex: 1;
-    text-align:left;
-    padding: 0 0 0 1.2em;
-    height: 4em;
-  }
 
   &:hover, &.active {
     color: #000;
@@ -42,13 +35,22 @@ const NavItem = styled(NavLink)`
     color: #000;
     background: #fefefe;
     border-bottom: none;
+    padding-top: 0.9em;
+    border-top: solid .3em ${({ color }) => color};
   }
+  &.name {
+    flex: 1;
+    text-align:left;
+    padding: 0 0 0 1.2em;
+    height: 4em;
+  }
+
   `;
 
 const Brand = styled.div` 
   display: flex;
   background: #eee;
-  flex: 1;
+  flex: 1 0 24em;
   align-items: center;
   & > img {
     height: 3em;
@@ -67,15 +69,15 @@ const Name = styled.div`
   }
 `;
 
-let Space = styled.div`flex:1;`;
+const Space = styled.div`flex:8;`;
 
-let COLORS = ['#e91e63', '#ffc107', '#4caf50', '#2196f3'];
+const COLORS = ['#e91e63', '#ffc107', '#4caf50', '#2196f3'];
 
 const Header = ({ routes }) => (
   <Navigation>
     <Brand>
       <img src={logo} className="App-logo" alt="logo" />
-      <NavItem to={'/'} className="name">
+      <NavItem to={'/'} className="name" color="#000">
         <Name>
           <h1> Rodrigo Roa Rodríguez </h1>
           <h3> Data Visualization, UX & Web-Development</h3>
