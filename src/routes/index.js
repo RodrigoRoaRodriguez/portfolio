@@ -5,10 +5,10 @@ import Skills from './Skills';
 import Contact from './Contact';
 
 const routes = [
-  { name: 'Home', component: Home, path: '' },
-  { name: 'Art', component: Art, path: 'art' },
+  // { name: 'Home', component: Home, path: '' },
   { name: 'Portfolio', component: Portfolio, path: 'portfolio' },
   { name: 'Skills', component: Skills, path: 'skills' },
+  { name: 'Art', component: Art, path: 'art' },
   { name: 'Contact', component: Contact, path: 'Contact' },
 ];
 

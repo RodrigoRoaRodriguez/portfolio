@@ -1,10 +1,7 @@
-export const centeringContainer = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  backgroundColor: "red",
-}
+import { css } from 'styled-components';
 
-export const row = {
-  display: "flex",
-}
+export const centeringContainer = css`
+  display: "flex";
+  alignItems: "center";
+  justifyContent: "center";
+`
